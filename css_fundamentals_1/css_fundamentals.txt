@@ -1,0 +1,199 @@
+########## MARGINS AND PADDING #############
+
+Margin and Padding - Margins and spacing out text
+
+A quick recap and a look into the basics of how spacing is created between lines of text, as well as how we can control that spacing.
+
+Important note to remember The default margin on the top and bottom of text elements (headings, paragraphs, lists), is equal to the font-size.
+
+(for h1 it's actually a little bit smaller, but it's close enough)
+
+##
+Margin and Padding - Collapsing margins
+
+A look at one a useful, but often frustrating CSS behavior, collapsing margins.
+
+Whenever two margins touch each other, they will collapse into one single margin instead of two of them which push against one another. 
+In general this leads to things being a lot easier to predict, but it does have a big downside as well!
+
+##
+Margin and Padding - Consistency and a new type of selector
+
+Being able to be consistent and predict exactly how things will be spaced out is really important when putting together a layout with CSS.
+
+One way to make it easier is by selecting multiple elements with a single selector!
+
+We can do this by separating the different elements with a comma.
+##
+
+########## INLINE AND BLOCK BEHAVIOR #############
+
+BLOCK ELEMENTS
+Always start a new line of content
+Default width: 100%
+Defauly height is 0, but it will grow to fit the contenti inside it
+
+INLINE ELEMENTS
+Do not start new lines (goes with the flow of contenta around it)
+Does not accept width, height, or margin top and bottom
+Padding top and bottom can cause overlapping issues
+##
+
+THE SPAN ELEMENT
+
+The span element is used to add style within a heading or a paragraph. It works much like the em and strong elements, 
+but without any default styling or meaning attatched to it.
+
+Because they are generic, like a div, we'll often use a class on them.
+##
+
+STYLING LINKS
+
+Websites tends to have a lot of links on them, so it's important that we know how to style them!
+
+If you don't see the interaction when I am going through it in this video, hit pause and try it yourself!
+
+The different link states:
+
+a:link - the default, normal state of a link
+a:visited - a link to a page/site that you've already visited
+a:focus - when someone selects a link without clicking on it (usually with keyboard navigation)
+a:hover - when you "hover" the mouse cursor over a link
+a:active - when someone is actively clicking on a link
+
+Order matters
+A link often meets the requirements for 2 or more of the above states at any given time, so the order you put them in your CSS really matters. 
+In general, it should follow the order like you see in the above list.
+##
+
+INLINE BLOCK
+
+Inline elements are great and all, but we can't set a margin on the top or bottom, which sometimes can be useful, 
+and while we can put padding on them, the top and bottom aren't taken into the flow of the document and in worst case scenarios, 
+it'll actually overlap content!
+
+We can change the display property to inline-block though, which keeps elements next to one another, 
+but also allows us to set width, height, and margin and padding on the top and the bottom. It's the best of both worlds :)
+##
+
+STYLING BUTTONS
+
+Making a link look like a button takes a few steps:
+
+ALWAYS use padding to create the "size" of the button, not width and height!
+display: inline-block
+give it a background-color
+give it some padding
+1:2 or 1:2.5 ratio on the padding (top & bottom:left & right) (the padding left/right needs to be a bigger number than the padding on the top/bottom)
+give it a hover and focus state
+remove the underline with text-decoration: none;
+##
+
+SPECIFICITY BASICS
+
+Specificity in CSS revolves around the idea of how specific a selector is. The higher the specificity, 
+the more important that rule is considered. Whichever has the highest will win and style a specific element.
+
+Specificity of basic selectors from lowest to highest
+
+1) Element selector     <p></p>
+2) Class selector       .test
+3) ID selector          #test
+
+GENERAL APPROACH TO STYLING THINGS:
+
+General rules get put on element seletors:  (body, headings, paragraphs, etc)
+EVERYTHING ELSE gets a CLASS!!
+##
+
+SPECIFICITY - TWO SELECTORS OF EQUAL VALUE
+
+When two selectors have a equal specificity, it will always be the second one which wins
+##
+
+COMPOUND SELECTORS
+
+Compound selectors are when we select elements, classes, or IDs that are nested inside of another element in our HTML.
+
+We do this my using a space in our CSS file, so while a in our CSS would select every anchor tag in the entire site, 
+.call-to-action a would only select anchors that are inside of elements with the class of call-to-action.
+##
+
+COMPOUND SELECTORS AND SPECIFICITY
+
+Compount selectors add to the specificity of selectors.
+
+The easiest way to think about it is:
+
+1) element selector = 0 0 1
+2) class selector = 0 1 0
+3) ID selector = 1 0 0
+This isn't totally true though, as 12 element selectors would still be overwritten by a single class selector, 
+but hopefully you never run into that in the real world.
+##
+
+A BETTER WAY TO NAME OUR CSS classes
+
+Writing code the doesn't repeat is really useful, so I strongly recommend creating multiple classes for 
+components such as buttons. 
+The first class is a generic one which sets the stage, whereas the second class is the modifier which add things like colors.
+
+generic  -  .btn
+modifier -  .btn-accent .btn-dark etc
+##
+
+THE TEXT PROPERTIES
+
+There are a lot of different properties for controlling our text!
+
+In this video I cover the most common ones, though it's far from a comprehensive look!
+
+font-family
+font-size
+font-weight
+font-style
+text-align
+text-transform
+text-decoration
+color
+line-height
+##
+
+FONT-FAMILY AND FONT STACKS
+
+When declaring a font-family, if the person doesn't have that font installed on their computer, it will just go to the 
+system default. In other words, the font we wanted won't load in.
+
+When we declare our font-family though, we can create a list of fonts to use, separated by commas. This is our font stack. 
+If the first font isn't available on the vistors computer, it will try the next one in the list. 
+If that was isn't available either, it goes to the next, and so on.
+
+This allows us to build in some backups, as we can't rely on people always having the font we want installed on their computer.
+
+NOTE In the lesson I mention it defaulting to Comic Sans. You might see something else depending on your OS
+
+It can be hard to create our own font stacks though, so luckily there are resources such as CSS Font Stack which can help us out!
+##
+
+HOW TO USE GOOGLE fonts
+
+We can use Google fonts instead of relying on basic font stacks that rely on the fonts that people already have installed on their computer.
+##
+
+INHERITANCE
+
+A look at the basic concept of inheritance with CSS.
+
+You can think of it the same way we inherit things like our eye, skin, and hair color from our parents, but with the added 
+benefit of it being super predictable when it comes to CSS!
+##
+
+WORKING WITH, OVERWRITING, AND APPLYING INHERITANCE
+
+Inheritance allows us to write a lot less CSS, which is super handy. Because it applies to most of the font properties, 
+we can set up most of them on the body itself, or on different sections of a site and have those styles trickle down to 
+the different elements inside of them.
+
+We can also overwrite any inherited property to anything we want, removing the inheritance, or we can give the inherit 
+value to any property, forcing it to become inherited!
+##
