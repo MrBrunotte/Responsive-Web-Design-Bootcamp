@@ -1,0 +1,131 @@
+Starting to think responsively
+
+The focus on this module:
+- Making responsive websites
+- CSS units
+- Flexbox basics
+- Media queries
+- How to approach a layout
+###
+
+CSS units
+
+There are many different types of CSS unit that we can use:
+
+Absolute units
+    pixels
+    cm, pt, in, mm, etc
+Relative units
+    relative to font-size
+        em
+        rem
+        ch
+        ex
+    relative to viewport (browser window)
+        vh
+        vw
+        vmin
+        vmax
+    percentage (relative to its parent!)
+
+
+CSS UNITS - PERCENTAGES
+
+Percentages, when set on the width (which is where we'll be using them the most), are always calculated as a percentage of their parent's width.
+
+This might seem to complicate matters, but once you get used to it, it's much easier to set up our layouts and, 
+when dealing with responsive layouts, it's an essential unit to understand.
+###
+
+CONTROLING THE WIDTH OF IMAGES
+
+We can fix our image by giving it a width, and to make it match the size of our container, we can give it's width a 
+value using percentage so that matches the size of the container at all times!
+
+set the width to img { width: 100%}, REMEMBER that its not .img but just img and x% of its parent!!
+###
+
+MIN-WIDTH AND MAX-WIDTH
+
+When starting to think responsively, setting a max-width on an element can be very useful. Often we want a layout to 
+be able to shrink down very small, but we want to limit the maximum size of elements to prevent line-lengths from 
+getting to long and the layout from becoming awkward.
+
+The properties
+Both of these will prevent an element from either getting bigger or smaller than the sizes given, despite whatever might be set on the width property.
+
+    min-width - the minimum possible size an element can be
+    max-width - the maximum possible size an element can be
+
+ for exampel:
+    width: 90%;
+    max-width: 620px;
+
+###
+
+CSS UNITS - THE EM UNIT (Relative unit = relative to the font-size of the parent)
+
+The em unit in CSS, when we are declaring a font-size, is always relative to the font-size of the parent.
+
+So, if I have an element with a font-size: 2em, and the parent has font-size: 10px, my element will have a 
+font-size that is equal to 20px, as it will be 2 x 10.
+
+Because most elements inherit their font-size, if we set all font-sizes with em, and then change the font-size 
+on the body, it will change the entire site in one quick step, which can be very useful!
+
+1em means inherit the font-size of the parent. (its relative to its parent)
+    1em = 100% of parents font-size
+    1.5em = 150% of parents font-size
+###
+
+THE PROBLEM WITH EMs 
+
+Because ems are relative to their parent, if their parent also have a font-size set in em it can cause this cascading 
+effect where font-sizes get out of control huge, and an h2 in one place might be half the size of an h2 somewhere else, 
+which is rarely what you'd actually want to happen.
+###
+
+CSS UNITS - REMs (solution to ems!!)
+
+The rem unit is short for Root em because it is always relative to the font-size of the ROOT of our page.
+
+In an HTML document, THE ROOT IS ALWAYS OUR HTML ELEMENT. So when we use rems we can keep the nice scaling for font-sizes like we saw with em, 
+but because it is always relative to one single elment, there is no risk of cascading font-sizes that go out of control.
+###
+
+PICKING WHICH UNIT TO USE
+
+My general rule of thumb:
+
+    font-sizes = rem            (font-size: 1.5rem;)
+    padding and margin = em     (padding: .5em 1.25em; /* em is relative to the font-size of this element */)
+    widths = px or em or %
+
+For width, percentage is very common, whereas either pixels or em work well for set sizes, like when setting a min-width or max-width. If you stick with pixels here, you'll be fine :)
+
+            h1 {
+                font-size: 3rem;        (parent)
+                margin-bottom: .5em;    (half the size of the parent)
+            }
+###
+
+VIDEO 11 - 13
+
+FLEXBOX REFRESHER AND SETTING UP SOME HTML 
+
+A quick refresher on how display: flex works, and an analysis of a layout.  
+
+elements normally have a    display:block or display:inline     as a default from the browser
+
+display:block
+    divs, header, footer, main, h1-h6, p, lists
+
+display:inline  
+    a, strong, em and span
+
+###
+
+BASIC STYLES AND SETTING UP THE COLUMNS
+
+Remember, to create columns, on the parent, in this case <div class="columns">, we want to declare display: flex. 
+This turns the children into flex-items, which instead of stacking on top of each other will suddenly become columns, going one next to the other.
