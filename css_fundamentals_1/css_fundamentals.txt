@@ -197,3 +197,56 @@ the different elements inside of them.
 We can also overwrite any inherited property to anything we want, removing the inheritance, or we can give the inherit 
 value to any property, forcing it to become inherited!
 ##
+
+VIDEO 20 - CREATING A NAVBAR (NAV20-25.HTML)
+
+Navigations are traditionally set up using an unordered list. This does lead to having to write extra CSS, and there is 
+some debate in the community currently going on about whether this is really the best way to still be working... 
+but with that said, using a ul is the most common way it's done, so we're going to take a look at doing it that way.
+
+If ever you want to create a navigation that does away with the ul, if you can do it this way, you'll have no problems at all as it's a lot simpler.
+###
+
+USING FLEXBOX TO START STYLING OUR NAVIGATION
+
+Because list-items are block elements, they want to stack on top of each other. To make them into columns, we can use 
+    display: flex 
+on the ul!
+
+In this case, our navigation is centered on the screen as well, so we'll take a look at a few new values that we can assign 
+to justify-content to help us out.
+###
+
+MAKING OUR NAV LOOK GOOD
+
+Now that the navigation is set up in terms of layout, it's time to run through and style the entire thing. There is nothing new here, 
+but there are a few little "gotcha"s that do come up during it.
+###
+
+ADDING THE UNDERLINE 
+
+Adding the underline isn't too hard at all (we can use a border-bottom), but at the same time in this video I take a look at some 
+best practices for navigation links, such as adding a bit of padding to them, and how we can give the current page a better style 
+so that it looks less interactive than the other pages.
+
+use the class="current-page" instead of class="active" since you its easier to style the "curren-page"
+###
+
+A MORE COMPLICATED NAV
+
+For such a simple and small part of a website (though a very important part of one), navigations, and the header in general, 
+sure do take a lot of styling to get to look good!
+
+In this case, we need to add in a .container to hold the content in the center of the page, and then make a few changes to it 
+to get the two columns required for this layout.
+###
+
+MAKING THE NAV RESPONSIVE
+
+While it's a little different, and slightly more complex than anything we've seen up until now, there's nothing new in this one, 
+so try and do it all on your own to start with, even if that means having to go back and review the media query lesson so that 
+you can do it on your own!
+
+END OF NAVIGATION BAR VIDEO
+###
+

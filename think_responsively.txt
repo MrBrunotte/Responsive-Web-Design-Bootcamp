@@ -123,9 +123,117 @@ display:block
 display:inline  
     a, strong, em and span
 
+display:flex (see the img display-flex.PNG)
 ###
 
 BASIC STYLES AND SETTING UP THE COLUMNS
 
-Remember, to create columns, on the parent, in this case <div class="columns">, we want to declare display: flex. 
+Remember, to create columns, on the parent, in this case     
+
+<div class="columns"> 
+we want to declare      display: flex. 
+
 This turns the children into flex-items, which instead of stacking on top of each other will suddenly become columns, going one next to the other.
+###
+
+ADDING THE BACKGROUND COLOR
+
+By using a modifier class, we can keep all the properties that our individual columns have, but change their background-color as well, 
+very similar to how we created our different button classes a little while ago.
+###
+
+SETTING THE COLUMN WIDTHS 
+
+When setting up columns, in general PERCENTAGE is the best type of unit to use, as it makes it very easy to device a layout up.
+###
+
+SPACING OUT THE COLUMNS - JUSTIFY CONTENT
+
+A look at the justify-content property, which works with display: flex to distribute content along the main axis (horizontally at the moment).
+
+Remember: the property (justify-content: ;) is set on the parent!!!
+
+The different values: 
+
+    justify-content: space-between 
+            will redistribute any extra space in between all the elements, leaving the left-most element to the left, and the right-most 
+            element all the way to the right.
+    
+    justify-content: space-around 
+            will redistribute extra space around each element, giving them all an equal amount - justify-content: space-between
+    
+    justify-content: space-evenly 
+            is very similar to space-around, but the spacing is more visually balanced.
+###
+
+CONTROLING THE VERTICAL POSITION OF FLEX ITEMS 
+
+The     align-items     property, by default, controls the vertical positioning of flex-items within their parent. In reality, 
+it's working on the "cross axis", but we'll explore what that means more in a future video.
+
+align-items values:
+    flex-start -    aligns all the items to the "start" of the parent (normally the top)
+    center -        vertically centers the flex-items inside the parent
+    flex-end -      aligns all the items to the "end" of the parent (the bottom)
+    baseline -      aligns the baseline of the first line of text in all the flex-items. It won't be noticeable if all font sizes are the same.
+###
+
+MEDIA QUERY BASICS 
+
+Media queries let us target differnt media types, as well as specific conditions within those types in our CSS.
+
+Basic syntax:
+    @media [media type] ([media condition]) { ... }
+    
+Media types:
+    screen      @media screen{...}
+    print       @media print{...}
+    speech      @media speech{...}
+
+Media condtion (lets us target specific conditions within the media type):
+    widths              @media(min-width: 600px) {...}
+    orientation         @media(orientation: landscape) {...}
+    specific features   @media(hover) {...}
+
+An example
+In this below example, the background of the body will only be red when using a device that has a screen, and which has a width of 600px or bigger.
+
+    @media screen and (min-width: 600px) {
+        body {
+            background: red;
+        }
+    }
+
+More information on media queries
+The MDN page Using Media Queries takes a much deeper look into them if you're the type of person who likes to dive in on subjects like this :)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+###
+
+MAKING OUT LAYOUT RESPONSIVE WITH FLEX-DIRECTION
+
+By changing the flex-direction of our parent inside a media query, plus a little bit more CSS, we can get our layout working on all screen sizes really easily!
+###
+
+FLEX-DIRECTION EXPLAINED
+
+flex-direction 
+    works by switching the main axis, which is a bit strange as it means that justify-content switches from controlling 
+    content horizontally to vertically, and align-items switches from the vertical to horizontal.
+
+Why this happens
+    justify-content 
+        controls content on the main axis of a flex container. So when we set flex-direction: column, 
+        we are changing the main axis from being horizontal to vertical instead.
+
+Similarly, align-items 
+        controls items along the cross axis, which gets switched from the vertical axis to the horizontal axis.
+###
+
+CREATING A NAVIGATION
+
+Navigations are traditionally set up using an unordered list. This does lead to having to write extra CSS, 
+and there is some debate in the community currently going on about whether this is really the best way to still be working... 
+but with that said, using a ul is the most common way it's done, so we're going to take a look at doing it that way.
+
+If ever you want to create a navigation that does away with the ul, if you can do it this way, you'll have no problems at all as it's a lot simpler.
