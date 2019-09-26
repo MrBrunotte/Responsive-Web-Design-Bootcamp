@@ -1,5 +1,15 @@
 Starting to think responsively
 
+MODULE WRAP UP
+FLEXBOX
+    Justify-content & align-items
+        position things on the page
+    Flex-direction (column/row)
+        switching the main axis (takes the justify-content/align-items and work the other way)
+    Media queries
+    How to build (and style) a navigation.
+    
+
 The focus on this module:
 - Making responsive websites
 - CSS units
