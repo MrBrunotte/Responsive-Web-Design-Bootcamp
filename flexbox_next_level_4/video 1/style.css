@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #2C73D2;
+    color: #fff;
+    text-align: center;
+}
+
+.flex-container {
+    border: 10px solid #F9F871;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: .25em;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* 
+    Shorthand to write this is:
+    flex-flow: row wrap;
+    */
+    
+    /*
+    flex-direction: column
+    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    */
+}
+
+.flex-item {
+    background: #8BEE86;
+    margin: .5em;
+    padding: .5em;
+    color: #424656;
+}
