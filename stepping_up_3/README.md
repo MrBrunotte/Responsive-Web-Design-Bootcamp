@@ -365,4 +365,4 @@ property, and comma separated.
 
 Here is a great article if you're interested in learning more about blending modes in general.
 
-https://www.slrlounge.com/workshop/the-ultimate-visual-guide-to-understanding-blend-modes/
+[https://www.slrlounge.com/workshop/the-ultimate-visual-guide-to-understanding-blend-modes/]
