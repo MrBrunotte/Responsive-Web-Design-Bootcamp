@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #2C73D2;
+    color: #fff;
+    text-align: center;
+}
+
+.flex-container {
+    border: 10px solid #F9F871;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: .25em;
+    
+    min-height: 300vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-item: ; works on an individual row by row*/
+    align-items: flex-start; 
+    /* align-content: ; works on all of the rows of content */
+    align-content: flex-start;
+}
+
+.big {
+    font-size: 2em;
+}
+
+.flex-item {
+    background: #8BEE86;
+    margin: 25px;
+    padding: 25px;
+    color: #424656;
+}

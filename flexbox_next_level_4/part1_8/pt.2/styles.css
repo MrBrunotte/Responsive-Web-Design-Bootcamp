@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    background: #2C73D2;
+    color: #fff;
+    text-align: center;
+}
+
+.flex-container {
+    border: 10px solid #F9F871;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: .25em;
+    
+    display: flex;
+    
+    /* flexes the axis that they work around*/
+    justify-content: center;
+    align-items: flex-start;
+
+    /* change the flex direction (up and down) */
+    flex-direction: column;
+
+    /* 
+    justify-content: ;
+    Distributs the flex-item along main axis (left to right)
+
+    The values 
+    justify-content: flex-start;    (default)
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: space-between; 
+    */
+
+    /* 
+    align-items: ;
+    Distributs the flex-item along cross axis (up and down)
+
+    The values
+    align-items: stretch;   (default)
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
+    */
+}
+
+.big {
+    font-size: 2em;
+}
+
+.flex-item {
+    background: #8BEE86;
+    margin: 25px;
+    padding: 25px;
+    color: #424656;
+}

@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #2C73D2;
+    color: #fff;
+    text-align: center;
+}
+
+.flex-container {
+    border: 10px solid #F9F871;
+    width: 80%;
+    margin: 0 auto;
+    padding: .25em;
+    
+    display: flex;
+    flex-direction: column; /* main axis is up an down */
+}
+
+@media (min-width: 600px) {
+    .flex-container {
+        flex-direction: row; 
+        /* main axix is left to right so now when we go lower than 600px is looks at the HEIGHT of 100px!! not the width! */
+    }
+}
+
+.flex-item {
+    background: #8BEE86;
+    margin: .5em;
+    padding: .5em;
+    color: #424656;
+    
+    width: 200px;
+
+}
+
+.flex-item-1 {
+    background: plum;
+    flex-basis: 100px; /* overwrites the width in .flex-item of 200px */
+    min-width: 200px;
+    max-height: 25px;
+}
+
+.flex-item-2 {
+    
+}
+
+.flex-item-3 {
+    
+}
