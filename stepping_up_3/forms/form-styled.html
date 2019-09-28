@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form-styled.css">
+    <title>Styled form</title>
+
+    <style>
+            /* It is better to use classes or attribute selectors to style the form instead of styling the elements themselves! */
+            form {
+                background: #efefef;
+                padding: 2em;
+            }
+            
+            /* Attribute selector*/
+            input[type="text"] {
+                margin-bottom: 1em;
+                padding: .25em;
+                border: 0;
+                background: red;
+            }
+            
+            button {
+                background: #333;
+                color: white;
+                border: 0;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background: #404040;
+            }
+        </style>
+</head>
+
+<body>
+    <h1>Forms Styled</h1>
+    <form action="#" method="post">
+        <label>
+            <input type="text" required placeholder="Enter your first name">
+        </label>
+        <br>
+        <input aria-label="last name" id="lname" type="text" required placeholder="Enter your last name">
+        <br>
+
+        <input id="email" type="email" required placeholder="email">
+        <button type="submit">Send away!</button>
+    </form>
+</body>
+
+</html>
