@@ -1,0 +1,31 @@
+.grid {
+    display: grid;
+    grid-template-columns: 150px 150px 200px;
+
+    align-items: stretch;
+}
+
+.grid-item {
+    background: #B823C1;
+    color: white;
+    padding: 1em 2em;
+    border: 2px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big {
+    padding: 3em 2em; /* bigger padding so it forces the other grid to strech!*/
+    background: #FF5670;
+}
+
+.start {
+    align-self: start;
+    justify-self: center;
+}
+
+.end {
+    align-self: end;
+    justify-self: end;
+}

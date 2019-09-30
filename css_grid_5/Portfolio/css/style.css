@@ -1,0 +1,38 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+    background: #333;
+    margin: 3em;
+}
+
+.portfolio {
+    padding: 1em;
+    /* Step one: display:grid; */
+    display: grid;
+    /* Step two */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* set the gap inbetween but not above and below */
+    grid-gap: 1em;
+}
+
+.portfolio-title {
+    text-align: center;
+    color: #00C896;
+    /* force the title to strech from left to right, so it takes up its own row! */
+    grid-column: 1 / -1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.portfolio-card {
+    box-shadow: 0 0 1em rgba(0,0,0,.25);
+    padding: 1em;
+    background: white;
+}
+
+.portfolio-card-title {
+    font-size: 1.5rem;
+    color: #000;
+}

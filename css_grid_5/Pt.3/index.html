@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>grid-row and grid-column shorthands</title>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="grid-item green">- Start at column 1 and ends a column 4<br>- start at row 2 and end at row 4</div>
+        <div class="grid-item red">- Start a column 2 and ends at column 4 (no rows added so it starts at the top!</div>
+    </div>
+    <div class="grid">
+        <div class="grid-item one">grid item</div>
+        <div class="grid-item two">grid item 2</div>
+    </div>
+    <div class="grid">
+        <div class="grid-item three">grid item</div>
+        <div class="grid-item four">grid item 2</div>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item five">grid-column: 1 / -1; when you dont know the numbers of columns but want it to strech
+            across the whole grid container</div>
+        <div class="grid-item six">grid item 2</div>
+    </div>
+</body>
+
+</html>

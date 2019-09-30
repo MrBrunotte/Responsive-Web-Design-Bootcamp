@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template: 100px 250px / 250px 250px 250px;
+}
+
+p {
+    border: 2px solid red;
+}
